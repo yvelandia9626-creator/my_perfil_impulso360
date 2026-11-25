@@ -1,0 +1,83 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f2f5fa;
+    font-family: 'Segoe UI', sans-serif;
+    color: #183251;
+}
+
+header {
+    background: #0b1d38;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 30px 5%;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+input, select {
+    padding: 13px;
+    border: 1px solid #dce3ed;
+    border-radius: 7px;
+    width: 100%;
+}
+
+button {
+    padding: 13px;
+    border: none;
+    background: #176dce;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e6ebf2;
+}
+
+th {
+    background: #edf4fc;
+}
+
+@media(max-width:650px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        overflow-x: auto;
+    }
+}

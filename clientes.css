@@ -1,0 +1,94 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f2f5fa;
+    color: #183251;
+}
+
+header {
+    background: #0b1d38;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 30px 5%;
+}
+
+.formulario, .tabla {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+    box-shadow: 0 3px 15px #00000008;
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce3ed;
+    border-radius: 7px;
+    margin-bottom: 12px;
+}
+
+button {
+    padding: 13px 25px;
+    background: #176dce;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0b4c99;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 13px;
+    border-bottom: 1px solid #e6ebf2;
+}
+
+th {
+    background: #edf4fc;
+}
+
+@media(max-width:650px) {
+    .campos {
+        grid-template-columns: 1fr;
+    }
+
+    .tabla {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}

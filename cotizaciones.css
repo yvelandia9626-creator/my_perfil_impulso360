@@ -1,0 +1,114 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f2f5fa;
+    color: #183251;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    background: #0b1d38;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 30px 5%;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 7px;
+    font-weight: 600;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #dce3ed;
+    border-radius: 7px;
+    margin: 5px;
+    max-width: 100%;
+}
+
+button {
+    background: #176dce;
+    color: white;
+    border: none;
+    padding: 13px 18px;
+    border-radius: 7px;
+    margin: 8px 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0b4c99;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e6ebf2;
+    text-align: left;
+}
+
+th {
+    background: #edf4fc;
+}
+
+.totales {
+    text-align: right;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+.totales h2 {
+    color: #1263c5;
+}
+
+@media(max-width:650px) {
+    .panel {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
+
+@media print {
+    header, button {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .panel {
+        box-shadow: none;
+        border: none;
+    }
+}

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMPULSO360 | Cotizaciones</title>
+<link rel="stylesheet" href="cotizaciones.css">
+</head>
+<body>
+
+<header>
+    <h2>⚡ IMPULSO360</h2>
+    <a href="dashboard.html">← Inicio</a>
+</header>
+
+<main>
+    <h1>Crear nueva cotización</h1>
+
+    <section class="panel">
+        <h3>Información general</h3>
+
+        <label>Número de cotización</label>
+        <input id="numero" readonly>
+
+        <label>Fecha</label>
+        <input id="fecha" type="date">
+
+        <label>Seleccionar cliente</label>
+        <select id="cliente">
+            <option value="">Seleccione un cliente</option>
+        </select>
+    </section>
+
+    <section class="panel">
+        <h3>Agregar productos</h3>
+
+        <select id="producto">
+            <option value="">Seleccione un producto</option>
+        </select>
+
+        <input id="cantidad" type="number" min="1"
+            value="1" placeholder="Cantidad">
+
+        <button id="agregar" type="button">Agregar producto</button>
+    </section>
+
+    <section class="panel">
+        <h3>Detalle de cotización</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Total</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="detalle"></tbody>
+        </table>
+
+        <div class="totales">
+            <p>Subtotal: $<span id="subtotal">0</span></p>
+            <p>IVA (19%): $<span id="iva">0</span></p>
+            <h2>Total: $<span id="total">0</span></h2>
+        </div>
+
+        <button id="guardar" type="button">Guardar cotización</button>
+        <button id="imprimir" type="button">Imprimir cotización</button>
+        <button id="correo" type="button">Preparar correo</button>
+    </section>
+</main>
+
+<script src="cotizaciones.js"></script>
+</body>
+</html>

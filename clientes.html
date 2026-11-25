@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMPULSO360 | Clientes</title>
+<link rel="stylesheet" href="clientes.css">
+</head>
+<body>
+
+<header>
+    <h2>⚡ IMPULSO360</h2>
+    <a href="dashboard.html">← Volver al inicio</a>
+</header>
+
+<main>
+    <h1>Gestión de clientes</h1>
+    <p>Registra y administra tus clientes.</p>
+
+    <section class="formulario">
+        <h3>Nuevo cliente</h3>
+
+        <form id="clienteForm">
+            <div class="campos">
+                <input id="nombre" placeholder="Nombre o razón social" required>
+                <input id="documento" placeholder="NIT / Cédula" required>
+                <input id="telefono" placeholder="Teléfono">
+                <input id="correo" type="email" placeholder="Correo electrónico">
+                <input id="direccion" placeholder="Dirección">
+                <input id="ciudad" placeholder="Ciudad">
+            </div>
+            <button type="submit">Guardar cliente</button>
+        </form>
+    </section>
+
+    <section class="tabla">
+        <h3>Clientes registrados</h3>
+        <input id="buscar" placeholder="Buscar cliente...">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Documento</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="listaClientes"></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="clientes.js"></script>
+</body>
+</html>

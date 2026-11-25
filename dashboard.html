@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPULSO360 | Inicio</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>⚡ IMPULSO<span>360</span></h2>
+            <small>GESTIÓN COMERCIAL</small>
+        </div>
+
+        <nav>
+            <a class="active" href="dashboard.html">▦ Inicio</a>
+            <a href="clientes.html">♙ Clientes</a>
+            <a href="productos.html">▣ Productos e insumos</a>
+            <a href="cotizaciones.html">▤ Crear cotización</a>
+            <a href="historial.html">◷ Historial</a>
+        </nav>
+
+        <a class="logout" href="index.html">↪ Cerrar sesión</a>
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <div>
+                <h2>Panel principal</h2>
+                <p>Bienvenido a IMPULSO360</p>
+            </div>
+            <div class="user">Administrador</div>
+        </header>
+
+        <section class="welcome">
+            <h1>¡Bienvenido a IMPULSO360!</h1>
+            <p>Administra tu negocio desde un solo lugar.</p>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <span>Clientes registrados</span>
+                <h2 id="totalClientes">0</h2>
+                <p>Base de clientes</p>
+            </div>
+
+            <div class="card">
+                <span>Productos e insumos</span>
+                <h2 id="totalProductos">0</h2>
+                <p>Inventario comercial</p>
+            </div>
+
+            <div class="card">
+                <span>Cotizaciones</span>
+                <h2 id="totalCotizaciones">0</h2>
+                <p>Documentos generados</p>
+            </div>
+
+        </section>
+
+        <section class="quick-access">
+            <h2>Accesos rápidos</h2>
+
+            <div class="quick-grid">
+                <a href="clientes.html">+ Crear cliente</a>
+                <a href="productos.html">+ Crear producto</a>
+                <a href="cotizaciones.html">+ Nueva cotización</a>
+                <a href="historial.html">Consultar historial</a>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script>
+    if (!sessionStorage.getItem("impulso360_usuario")) {
+        window.location.href = "index.html";
+    }
+</script>
+</body>
+</html>

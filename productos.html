@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMPULSO360 | Productos</title>
+<link rel="stylesheet" href="productos.css">
+</head>
+<body>
+
+<header>
+    <h2>⚡ IMPULSO360</h2>
+    <a href="dashboard.html">← Inicio</a>
+</header>
+
+<main>
+    <h1>Base de productos e insumos</h1>
+    <p>Administra los productos y servicios de tu empresa.</p>
+
+    <section class="panel">
+        <h3>Registrar producto</h3>
+
+        <form id="productoForm">
+            <input id="codigo" placeholder="Código o referencia" required>
+            <input id="producto" placeholder="Nombre del producto" required>
+            <input id="descripcion" placeholder="Descripción">
+            <select id="unidad">
+                <option value="Unidad">Unidad</option>
+                <option value="Metro">Metro</option>
+                <option value="Kilogramo">Kilogramo</option>
+                <option value="Litro">Litro</option>
+                <option value="Servicio">Servicio</option>
+            </select>
+            <input id="costo" type="number" min="0" step="0.01"
+                placeholder="Costo" required>
+            <input id="precio" type="number" min="0" step="0.01"
+                placeholder="Precio de venta" required>
+
+            <button type="submit">Guardar producto</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h3>Productos registrados</h3>
+        <input id="buscarProducto" placeholder="Buscar producto...">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Producto</th>
+                    <th>Unidad</th>
+                    <th>Costo</th>
+                    <th>Precio</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="listaProductos"></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="productos.js"></script>
+</body>
+</html>
